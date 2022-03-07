@@ -7,10 +7,10 @@ import rentalRouter from "./rentalRouter.js";
 
 const router = Router();
 
-router.use(rentalRouter);
 router.use(categoryRouter);
 router.use(gameRouter);
 router.use(customerRouter);
+router.use(rentalRouter);
 
 
 export default router;

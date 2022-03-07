@@ -99,7 +99,7 @@ export async function updateCustomer(req, res){
         const result = await db.query(`
             SELECT id
             FROM customers
-            WHERE cpf=$1 AND id=$2
+            WHERE cpf=$1 AND id!=$2
         `, [cpf, id]);
 
         if(result.rowCount > 0)
